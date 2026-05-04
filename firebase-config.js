@@ -1,6 +1,9 @@
 // ⚠️ IMPORTANTE: Substitua com suas credenciais do Firebase
 // Acesse: https://console.firebase.google.com > Seu Projeto > Configurações > Seus Apps
 
+
+npm install firebase
+
 const firebaseConfig = {
     apiKey: "AIzaSyDIVrG1x2z3-z4z5z6z7z8z9z0z1z2z3z",
     authDomain: "seu-projeto-parkeverde.firebaseapp.com",
