@@ -841,12 +841,17 @@
         }
 
         // Salvar dados
-        function saveData() {
-            localStorage.setItem('parkVerdePagamentos', JSON.stringify(paymentStatus));
-            localStorage.setItem('parkVerdePersonas', JSON.stringify(parcelaPersons));
-            localStorage.setItem('parkVerdeValues', JSON.stringify(parcelaValues));
-            updateLastModified();
-        }
+ // Salvar dados
+function saveData() {
+    localStorage.setItem('parkVerdePagamentos', JSON.stringify(paymentStatus));
+    localStorage.setItem('parkVerdePersonas', JSON.stringify(parcelaPersons));
+    localStorage.setItem('parkVerdeValues', JSON.stringify(parcelaValues));
+    
+    // NOVO: Sincronizar com Firebase
+    syncData('dados');
+    
+    updateLastModified();
+}
 
         // Atualizar última modificação
         function updateLastModified() {
